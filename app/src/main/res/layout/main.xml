@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:background="#EFEFEF">
+
+	<android.support.design.widget.AppBarLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+		<android.support.v7.widget.Toolbar
+			android:id="@+id/toolbar"
+			app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+			android:layout_width="match_parent"
+			android:layout_height="?attr/actionBarSize"/>
+
+	</android.support.design.widget.AppBarLayout>
+
+	<android.support.v7.widget.CardView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="#FFFFFF"
+		app:cardCornerRadius="3dp"
+		android:layout_margin="5dp">
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+
+			<TextView
+				android:layout_height="wrap_content"
+				android:textAppearance="?android:attr/textAppearanceSmall"
+				android:layout_width="wrap_content"
+				android:id="@+id/Console_title"
+				android:text="控制台"
+				android:layout_margin="10dp"
+				android:textColor="@color/colorPrimaryDark_green"/>
+
+			<Button
+				android:layout_height="wrap_content"
+				android:layout_alignParentRight="true"
+				android:layout_width="wrap_content"
+				android:id="@+id/Console_clean"
+				android:text="清空控制台"
+				style="?android:attr/buttonBarButtonStyle"
+				android:textColor="@color/colorAccent_green"/>
+
+			<ScrollView
+				android:id="@+id/Console_scrollView"
+				android:layout_below="@id/Console_title"
+				android:layout_height="150dp"
+				android:layout_width="match_parent">
+
+				<RelativeLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content">
+
+					<TextView
+						android:text="=====分割线====="
+						android:id="@+id/TextView_Console"
+						android:singleLine="false"
+						android:scrollbars="vertical"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"/>
+
+				</RelativeLayout>
+
+			</ScrollView>
+
+		</RelativeLayout>
+
+	</android.support.v7.widget.CardView>
+
+	<RelativeLayout
+		android:layout_height="match_parent"
+		android:layout_width="match_parent">
+
+		<LinearLayout
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:orientation="vertical"
+			android:layout_centerInParent="true"
+			android:gravity="center">
+
+			<Button
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:id="@+id/button_front"
+				android:text="前进"
+				android:layout_marginBottom="30dp"/>
+
+			<LinearLayout
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:orientation="horizontal">
+
+				<Button
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"
+					android:id="@+id/button_left"
+					android:text="左转"/>
+
+				<Button
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"
+					android:id="@+id/button_right"
+					android:text="右转"
+					android:layout_marginLeft="40dp"/>
+
+			</LinearLayout>
+
+			<Button
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:id="@+id/button_back"
+				android:text="后退"
+				android:layout_marginTop="30dp"/>
+
+		</LinearLayout>
+
+	</RelativeLayout>
+
+</LinearLayout>
+
